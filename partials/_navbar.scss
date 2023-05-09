@@ -1,0 +1,257 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 4.5rem;
+    background: $color-red;
+    box-shadow: $b-shadow-1;
+    z-index: 99;
+
+    .navbar__container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $color-white;
+            text-transform: capitalize;
+            transition: $transition;
+
+            & span {
+                font-weight: 200;
+                font-style: italic;
+                font-size: 1rem;
+                letter-spacing: 2px;
+                text-transform: lowercase;
+                transition: $transition;
+            }
+
+            &:hover {
+                transform: scale(1.1);
+
+                & span {
+                    font-style: normal;
+                    text-transform: capitalize;
+                }
+            }
+        }
+
+        .navbar__list {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            .navbar__item {
+                text-transform: capitalize;
+                cursor: pointer;
+                transition: $transition;
+
+                a {
+                    color: $color-white;
+                    letter-spacing: 2px;
+                    font-weight: 500;
+                }
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+
+                span {
+                    display: none;
+                }
+            }
+
+            .signin a  {
+                transition: $transition;
+                letter-spacing: 1px;
+            }
+
+            .navbar__profile {
+                position: relative;
+                cursor: pointer;
+
+                .avatar__image {
+                    width: 3rem;
+                    height: 3rem;
+                    border: 2px solid $color-white;
+                    border-radius: 50%;
+                    filter: brightness(1.2);
+                    transition: $transition;
+                    overflow: hidden;
+
+                    &:hover {
+                        background: $color-white;
+                        transform: scale(1.1);
+                    }
+                }
+            }
+
+            .navbar__profile ul {
+                position: absolute;
+                top: 1rem;
+                right: 0;
+                width: 6rem;
+                display: flex;
+                flex-direction: column;
+                text-align: center;
+                box-shadow: $b-shadow;
+                background: $color-red;
+                border-radius: .5rem;
+                transition: $transition;
+                opacity: 0;
+
+                li a {
+                    display: block;
+                    width: 100%;
+                    padding: 1rem;
+                    color: $color-white;
+                    text-transform: capitalize;
+                    transition: $transition;
+                }
+
+                & {
+
+                    li:first-child:hover a {
+                        background: $color-dark;
+                        border-top-right-radius: .5rem;
+                        border-top-left-radius: .5rem;
+                    }
+
+                    li:last-child:hover a {
+                        background: $color-white;
+                        color: $color-dark;
+                        border-bottom-right-radius: .5rem;
+                        border-bottom-left-radius: .5rem;
+                    }
+                }
+            }
+
+            .navbar__profile:hover > ul {
+                opacity: 1;
+                top: 4rem;
+            }
+        }
+
+        .navbar__btn {
+            display: none;
+        }
+    }
+}
+
+/*==========JavaScript==========*/
+.scrolling {
+    background: $color-dark;
+}
+
+
+/*==========Media Query Tablet==========*/
+@media (max-width: 1024px) {
+    .navbar {
+    
+        .navbar__container {
+            position: relative;
+
+            .navbar__btn {
+                display: inline-block;
+
+                button{
+                    font-size: 1.8rem;
+                    background: $color-transparent;
+                    color: $color-white;
+                    cursor: pointer;
+                }
+
+                .close__navbar {
+                    display: none;
+                }
+            }
+    
+            .navbar__list {
+                position: absolute;
+                top: 103%;
+                right: 0;
+                width: 15rem;
+                align-items: flex-start;
+                justify-content: center;
+                flex-direction: column;
+                gap: 0;
+                display: none;
+    
+                .navbar__item {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+                    height: 3rem;
+                    box-shadow: $b-shadow;
+                    background: $color-red;
+                    transform-origin: top;
+                    perspective: 500px;
+                    animation: dropMenu 600ms 0s ease forwards;
+
+                    a {
+                        border-radius: 0;
+                        width: 100%;
+                        height: 100%;
+                        background: var(--color-dark);
+                        padding: 0 2rem;
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    span {
+                        display: inline-block;
+                    }
+
+                    i {
+                        display: none;
+                    }
+                }
+
+                @keyframes dropMenu {
+                    0% {
+                        transform: rotateX(90deg);
+                    }
+                    100% {
+                        transform: rotateX(0);
+                        opacity: 1;
+                    }
+                }
+
+                .navbar__profile {
+                    background: $color-red;
+                    width: 100%;
+                    top: 100%;
+                    padding: .5rem 0;
+
+                    ul {
+                        top: 4rem;
+                        width: 15rem;
+                        flex-direction: row;
+                        border-radius: 0;
+
+                        li {
+                            top: 5rem;
+                            width: 100%;
+                        }
+                    }
+
+                    .avatar__image {
+                        margin-left: 2rem;
+                    }
+
+                }
+                
+                .navbar__profile:hover > ul {
+                    top: 4.5rem;
+                }
+            }
+        }
+    }
+
+}
+
+

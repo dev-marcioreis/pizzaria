@@ -1,0 +1,256 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--========Autor========-->
+    <meta name="author" contente="Marcio Reis">
+    <meta name="description" contente="Portfólio do desenvolvedor front-end Marcio Reis">
+    <meta name="keywords" contente="Portfolio, html, css, front-end, JavaScript, Desenvolvimento, React, React Native, Angular, NodeJS, Vue, Android, IOS, HTTP, SEO, Scrum, Bootstrap, Git, GitHub, Tailwind, Regex, QA, Php, TypeScript">
+    <!--========Icon========-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--========CSS========-->
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!--========Favicon========-->
+    <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
+    <!--========JavaScript========-->
+    <script src="js/main.js" defer></script>
+    <script src="js/route.js" defer></script>
+    <title>Pizzaria | Pedir Delivery</title>
+</head>
+<body>
+    
+    <!--========Navbar========-->
+    <nav class="navbar">
+        <div class="container navbar__container">
+            <a href="index.html" class="logo">pizzaria</a>
+            <ul class="navbar__list">
+                <li class="navbar__item"><a href="#top"><i class="uil uil-estate"></i><span>início</span></a></li>
+                <li class="navbar__item"><a href="#pizzas">pizzas</a></li>
+                <li class="navbar__item"><a href="#bebidas">bebidas</a></li>
+                <li class="navbar__item"><a href="#calzones">calzones</a></li>
+                <li class="navbar__item"><a href="#cdoce">calzones doce</a></li>
+                <li class="navbar__item signin"><a href="signin.html">entrar <i class="uil uil-signin"></i></a></li>
+                <li class="navbar__profile">
+                    <div class="avatar__image">
+                        <img src="assets/images/user.png" alt="Profile image">
+                    </div>
+                    <ul>
+                        <li><a href="index.html"><i class="uil uil-user"></i> perfil</a></li>
+                        <li><a href="index.html">sair <i class="uil uil-signout"></i></a></li>
+                    </ul>
+                </li>
+            </ul>
+            <div class="navbar__btn">
+                <button class="open__navbar"><i class="uil uil-bars"></i></button>
+                <button class="close__navbar"><i class="uil uil-multiply"></i></button>
+            </div>
+        </div>
+    </nav>
+
+    <!--========Hero========-->
+    <section class="hero" id="top">
+        <div class="hero__container">
+            <img src="assets/images/hero.jpg" alt="Hero image">
+            <div class="hero__title">
+                <h1>A melhor pizza de <span>são paulo</span></h1>
+            </div>
+        </div>
+    </section>
+
+    <!--========Order========-->
+    <section class="order">
+        <div class="order__container">
+            <button href="cart.html" class="cart" id="showCart"><i class="uil uil-shopping-cart"></i></button>
+            <button href="cart.html" class="cart" id="hideCart"><i class="uil uil-angle-double-left"></i></button>
+            <aside class="cart__container">
+                <h2 class="title"><i class="uil uil-shopping-cart"></i> carrinho</h2>
+                <div class="cart__content">
+                    <span><i class="uil uil-shopping-cart"></i> vazio</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!--========Main========-->
+    <main class="main">
+        <div class="container">
+
+            <!--========Pizzas========-->
+            <section class="box__section" id="pizzas">
+                <h2 class="title"><i class="uil uil-pizza-slice"></i> pizzas</h2>
+                <div class="box__container">
+                    <article class="box">
+                        <h3 class="item__title">Pizza broto salgada</h3>
+                        <p class="item__text">Pizza de 25cm - <strong>Até 2 sabores</strong></p>
+                        <span class="item__price">A partir de <span>30,90</span> <strong>R$28,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/pizza.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Pizza broto doce</h3>
+                        <p class="item__text">Pizza de 25cm - <strong>Até 2 sabores</strong></p>
+                        <span class="item__price">A partir de <strong>R$28,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/pizza.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Pizza grande salgada</h3>
+                        <p class="item__text">Pizza de 35cm - <strong>Até 2 sabores</strong></p>
+                        <span class="item__price">A partir de <span>43,90</span> <strong>R$41,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/pizza.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Pizza grande doce</h3>
+                        <p class="item__text">Pizza de 25cm - <strong>Até 2 sabores</strong></p>
+                        <span class="item__price">A partir de <strong>R$37,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/pizza.png" alt="Pizza image">
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!--========Bebidas========-->
+            <section class="box__section" id="bebidas">
+                <h2 class="title"><i class="uil uil-glass-martini-alt"></i> bebidas</h2>
+                <div class="box__container">
+                    <article class="box">
+                        <h3 class="item__title">Coca-Cola</h3>
+                        <p class="item__text">600ml</p>
+                        <span class="item__price"><strong>R$9,00</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/c600ml.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Coca-Cola</h3>
+                        <p class="item__text">Lata</p>
+                        <span class="item__price"><strong>R$6,00</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/clata.png" alt="Drink image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Fanta</h3>
+                        <p class="item__text">Lata</p>
+                        <span class="item__price"><strong>R$6,00</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/flata.png" alt="Drink image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Guaraná</h3>
+                        <p class="item__text">Lata</p>
+                        <span class="item__price"><strong>R$6,00</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/glata.png" alt="Drink image">
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!--========Calzones========-->
+            <section class="box__section" id="calzones">
+                <h2 class="title"><i class="uil uil-chart-pie-alt"></i> calzones</h2>
+                <div class="box__container">
+                    <article class="box">
+                        <h3 class="item__title">Americana - Calzone</h3>
+                        <p class="item__text">Presunto, mussarela, ovos e bacon</p>
+                        <span class="item__price"><strong>R$31,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Americana - Calzone</h3>
+                        <p class="item__text">Presunto, mussarela, ovos e bacon</p>
+                        <span class="item__price"><strong>R$31,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Americana - Calzone</h3>
+                        <p class="item__text">Presunto, mussarela, ovos e bacon</p>
+                        <span class="item__price"><strong>R$31,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Americana - Calzone</h3>
+                        <p class="item__text">Presunto, mussarela, ovos e bacon</p>
+                        <span class="item__price"><strong>R$31,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone.png" alt="Pizza image">
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!--========Calzones doce========-->
+            <section class="box__section" id="cdoce">
+                <h2 class="title"><i class="uil uil-chart-pie-alt"></i> calzones doce</h2>
+                <div class="box__container">
+                    <article class="box">
+                        <h3 class="item__title">Chocolate - Calzone</h3>
+                        <p class="item__text">Chocolate ao leite</p>
+                        <span class="item__price"><strong>R$29,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone-doce.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Chocolate - Calzone</h3>
+                        <p class="item__text">Chocolate ao leite</p>
+                        <span class="item__price"><strong>R$29,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone-doce.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Chocolate - Calzone</h3>
+                        <p class="item__text">Chocolate ao leite</p>
+                        <span class="item__price"><strong>R$29,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone-doce.png" alt="Pizza image">
+                        </div>
+                    </article>
+                    <article class="box">
+                        <h3 class="item__title">Chocolate - Calzone</h3>
+                        <p class="item__text">Chocolate ao leite</p>
+                        <span class="item__price"><strong>R$29,90</strong></span>
+                        <div class="box__image">
+                            <img src="assets/images/calzone-doce.png" alt="Pizza image">
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+
+        </div>
+    </main>
+
+    <!--========Footer========-->
+    <footer class="footer">
+        <div class="container footer__container">
+            <p>Desenvolvido por:</p>
+            <h3><a href="https://marcioreis.vercel.app/" target="_blank">márcio reis</a></h3>
+            <div class="footer__socials">
+                <a href="https://github.com/dev-marcioreis" target="_blank"><i class="uil uil-github"></i></a>
+                <a href="https://www.linkedin.com/in/devmarcioreis/" target="_blank"><i class="uil uil-linkedin"></i></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
