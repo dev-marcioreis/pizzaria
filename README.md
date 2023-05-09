@@ -7,7 +7,7 @@ Este projeto é um modelo para delivery.
 ## 🚀 Em desenvolvimento...
 
 ## 📋 Tecnologias
-HTML + CSS + JavaScript
+HTML + SASS + JavaScript
 
 ## ✒️ Autor
 Márcio Reis
