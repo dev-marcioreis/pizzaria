@@ -4,7 +4,7 @@
 
 Este projeto é um modelo para delivery.
 
-## 🚀 Em desenvolvimento...
+## 🚀 Finalizando...
 
 ## 📋 Tecnologias
 HTML + SASS + JavaScript
